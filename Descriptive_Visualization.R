@@ -53,3 +53,34 @@ boxplot(airquality[,0:4], main="multiple boxplots")
 plot(airquality$Ozone)
 plot(airquality$Ozone)
 
+############################################################################
+sd(airquality$Ozone, na.rm =T)
+
+############################################################################
+e_quakes <- datasets::quakes
+
+head(e_quakes,10)
+tail(e_quakes,10)
+
+summary(e_quakes)
+summary(e_quakes$depth)
+summary(e_quakes$mag)
+
+par(mfrow = c(1,1))
+plot(e_quakes$depth)
+plot(e_quakes$depth, type = "l")
+
+plot(e_quakes$depth,e_quakes$mag, type="p")
+barplot(e_quakes$mag, horiz = T)
+
+hist(e_quakes$depth)
+boxplot(e_quakes$depth)$out
+
+sd(e_quakes$depth, na.rm = T)
+var(e_quakes$depth)
+skewness(e_quakes$depth)
+kurtosis(e_quakes$depth)
+
+#var
+#skewness
+#kurtosis
